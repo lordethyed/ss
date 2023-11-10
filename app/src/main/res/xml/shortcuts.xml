@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="id1"
+        android:enabled="true"
+        android:icon="@drawable/baseline_home_24"
+        android:shortcutShortLabel="@string/events"
+        android:shortcutLongLabel="@string/events">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example.sectionone"
+            android:targetClass="com.example.sectionone.MainActivity" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="id2"
+        android:enabled="true"
+        android:icon="@drawable/baseline_sticky_note_2_24"
+        android:shortcutShortLabel="@string/tickets"
+        android:shortcutLongLabel="@string/tickets">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example.sectionone"
+            android:targetClass="com.example.sectionone.MainActivity" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="id3"
+        android:enabled="true"
+        android:icon="@drawable/baseline_fiber_smart_record_24"
+        android:shortcutShortLabel="@string/records"
+        android:shortcutLongLabel="@string/records">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example.sectionone"
+            android:targetClass="com.example.sectionone.MainActivity" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>
