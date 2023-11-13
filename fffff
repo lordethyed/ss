@@ -1,0 +1,32 @@
+import android.net.Uri;
+import android.os.Bundle;
+import android.widget.MediaController;
+import android.widget.VideoView;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    private VideoView videoView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        videoView = findViewById(R.id.videoView);
+
+        // Set the video file path or resource URI
+        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.sample; // Change "sample" to your video file name
+
+        // Create a media controller for playback controls (optional)
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(videoView);
+
+        // Set the media controller to the VideoView
+        videoView.setMediaController(mediaController);
+
+        // Set the video URI and start playing
+        videoView.setVideoURI(Uri.parse(videoPath));
+        videoView.start();
+    }
+}
